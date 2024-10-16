@@ -9,30 +9,28 @@ export default function Footr () {
 <div className="container">
   <div className="row">
     <div className="col-md-6 col-lg-3 mb-md-0 mb-4">
-      <h2 className="footer-heading"><a href="#" className="logo">Vacation Rental</a></h2>
-      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+      <h2 className="footer-heading"><a href="#" className="logo"> Online Library</a></h2>
+      <p>Explore a vast collection of books across various genres that cater to all interests. Our library is dedicated to providing readers with access to a wide range of literature, from fiction and non-fiction to academic resources.</p>
       <a href="#">Read more <span className="fa fa-chevron-right" style={{fontSize: '11px'}} /></a>
     </div>
     <div className="col-md-6 col-lg-3 mb-md-0 mb-4">
       <h2 className="footer-heading">Services</h2>
       <ul className="list-unstyled">
-        <li><a href="#" className="py-1 d-block">Map Direction</a></li>
-        <li><a href="#" className="py-1 d-block">Accomodation Services</a></li>
-        <li><a href="#" className="py-1 d-block">Great Experience</a></li>
-        <li><a href="#" className="py-1 d-block">Perfect central location</a></li>
+        <li><a href="#" className="py-1 d-block">Online Access</a></li>
+        <li><a href="#" className="py-1 d-block">Reading Recommendations </a></li>
+        <li><a href="#" className="py-1 d-block">Community Engagement</a></li>
       </ul>
     </div>
     <div className="col-md-6 col-lg-3 mb-md-0 mb-4">
       <h2 className="footer-heading">Tag cloud</h2>
       <div className="tagcloud row">
-        <a href="#" className="tag-cloud-link  col-6">apartment</a>
-        <a href="#" className="tag-cloud-link col-6">home</a>
-        <a href="#" className="tag-cloud-link col-6">vacation</a>
-        <a href="#" className="tag-cloud-link col-6">rental</a>
-        <a href="#" className="tag-cloud-link col-6">rent</a>
-        <a href="#" className="tag-cloud-link col-6">house</a>
-        <a href="#" className="tag-cloud-link col-6">place</a>
-        <a href="#" className="tag-cloud-link col-6">drinks</a>
+        <a href="#" className="tag-cloud-link  col-6">Books</a>
+        <a href="#" className="tag-cloud-link col-6">Literature</a>
+        <a href="#" className="tag-cloud-link col-6">Stories</a>
+        <a href="#" className="tag-cloud-link col-6">Knowledge</a>
+        <a href="#" className="tag-cloud-link col-6">Learning</a>
+        <a href="#" className="tag-cloud-link col-6">Resources</a>
+
       </div>
     </div>
     <div className="col-md-6 col-lg-3 mb-md-0 mb-4">
