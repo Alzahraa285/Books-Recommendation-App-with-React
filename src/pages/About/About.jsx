@@ -4,7 +4,7 @@ import './about.css';
 export default function Contact() {
   return (
     <div>
-<section className="hero-wrap hero-wrap-2" style={{backgroundImage: 'url("https://img.freepik.com/premium-photo/bookstore-romance-cozy-library-setting-with-lovethemed-book-covers_918839-19418.jpg?w=1380")'}} data-stellar-background-ratio="0.5">
+<section className="hero-wrap hero-wrap-2" style={{backgroundImage: 'url("http://newbookrecommendation.com/wp-content/uploads/2024/02/sendbutton3.webp")'}} data-stellar-background-ratio="0.5">
       <div className="overlay" />
       <div className="container">
         <div className="row no-gutters slider-text align-items-center justify-content-center">
@@ -108,8 +108,8 @@ export default function Contact() {
           <div className="col-md-6 wrap-about">
             <div className="img img-2 mb-4" style={{backgroundImage: 'url(https://newbookrecommendation.com/wp-content/uploads/2024/08/Are_You_Sleeping-1031x1536.webp)'}}>
             </div>
-            <h2>The most recommended vacation rental</h2>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+            <h2>What is a digital library?</h2>
+            <p>A digital library is a collection of digital objects, such as books, magazines, audio recordings, video recordings and other documents that are accessible electronically,Digital libraries provide users with online access to a wide range of resources ,They are often used by students for research or by professionals seeking to stay current on the latest developments in their field.</p>
           </div>
           <div className="col-md-6 wrap-about ftco-animate">
             <div className="heading-section">
@@ -118,79 +118,64 @@ export default function Contact() {
               </div>
             </div>
             <div className="pl-md-5">
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <p>Our library offers a variety of services that help explore the world of reading and knowledge. We are here to provide you with everything you need for outstanding printing.</p>
               <div className="row">
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-diet" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Tea Coffee</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading">Information consulting</h3>
+                    <p>Get help from our staff in finding the books and information you need.</p>
                   </div>
                 </div> 
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-workout" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Hot Showers</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading"> Printing services</h3>
+                    <p>You can print documents and research directly from the library.</p>
                   </div>
                 </div>
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-diet-1" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Laundry</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading">Digital libraries </h3>
+                    <p>provide users with online access to a wide range of resources.</p>
                   </div>
                 </div>      
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-first" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Air Conditioning</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading">access to rare</h3>
+                    <p>provide users with access to rare and out-of-print materials that might be difficult or impossible to locate in physical libraries. </p>
                   </div>
                 </div>
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-first" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Free Wifi</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading">social media-like </h3>
+                    <p>as well as social media-like features that can connect users with others to discuss topics.</p>
                   </div>
                 </div> 
-                <div className="services-2 col-lg-6 d-flex w-100">
+                <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
                     <span className="flaticon-first" />
                   </div>
                   <div className="media-body pl-3">
-                    <h3 className="heading">Kitchen</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    <h3 className="heading">continue to evolve</h3>
+                    <p>As digital libraries continue to evolve, new features such as multimedia content, data visualization tools .</p>
                   </div>
-                </div> 
-                <div className="services-2 col-lg-6 d-flex w-100">
-                  <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-first" />
-                  </div>
-                  <div className="media-body pl-3">
-                    <h3 className="heading">Ironing</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
-                  </div>
-                </div> 
-                <div className="services-2 col-lg-6 d-flex w-100">
-                  <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-first" />
-                  </div>
-                  <div className="media-body pl-3">
-                    <h3 className="heading">Lovkers</h3>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary</p>
-                  </div>
+           
+           
+                 
                 </div>
               </div>  
             </div>
