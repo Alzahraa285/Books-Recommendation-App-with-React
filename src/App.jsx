@@ -6,6 +6,7 @@ import Navbar from './pages/Navbar/Navbar';
 import Home from './pages/Home/Home';
 
 import Books from  './pages/Books/Books'
+import BookDetails from  './pages/BookDetails/BookDetails'
 import Author from  './pages/Author/Author'
 
 import About from './pages/About/About';
@@ -76,14 +77,7 @@ export default function App() {
               // </ProtectedRoute>
             }
           />
-      <Route
-            path="TopSearch"
-            element={
-              // <ProtectedRoute>
-                <TopSearch />
-              // </ProtectedRoute>
-            }
-          />
+   
       <Route
             path="CategoryPage"
             element={
@@ -112,15 +106,15 @@ export default function App() {
        
        <Route exact path='/details/:id' element={<BookPage />} />
      
-          {/* <Route
-            path="books/:id"
+           <Route
+            path="/book/:id"
             element={
-              <ProtectedRoute>
-                <BooksDetailes />
-              </ProtectedRoute>
+             //<ProtectedRoute>
+               <BookDetails/>
+             //</ProtectedRoute>
             }
           />
-          <Route
+          {/*<Route
             path="author/:id"
             element={
               <ProtectedRoute>
