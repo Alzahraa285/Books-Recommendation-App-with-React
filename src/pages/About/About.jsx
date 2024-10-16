@@ -4,7 +4,7 @@ import './about.css';
 export default function Contact() {
   return (
     <div>
-<section className="hero-wrap hero-wrap-2" style={{backgroundImage: 'url("http://newbookrecommendation.com/wp-content/uploads/2024/02/sendbutton3.webp")'}} data-stellar-background-ratio="0.5">
+<section className="hero-wrap hero-wrap-2" style={{backgroundImage: 'url("https://img.freepik.com/premium-photo/bookstore-romance-cozy-library-setting-with-lovethemed-book-covers_918839-19418.jpg?w=1380")'}} data-stellar-background-ratio="0.5">
       <div className="overlay" />
       <div className="container">
         <div className="row no-gutters slider-text align-items-center justify-content-center">
