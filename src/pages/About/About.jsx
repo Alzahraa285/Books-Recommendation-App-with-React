@@ -4,6 +4,8 @@ import './about.css';
 export default function Contact() {
   return (
     <div>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
 <section className="hero-wrap hero-wrap-2" style={{backgroundImage: 'url("http://newbookrecommendation.com/wp-content/uploads/2024/02/sendbutton3.webp")'}} data-stellar-background-ratio="0.5">
       <div className="overlay" />
       <div className="container">
@@ -122,7 +124,7 @@ export default function Contact() {
               <div className="row">
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-diet" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading">Information consulting</h3>
@@ -131,7 +133,7 @@ export default function Contact() {
                 </div> 
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-workout" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading"> Printing services</h3>
@@ -140,7 +142,7 @@ export default function Contact() {
                 </div>
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-diet-1" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading">Digital libraries </h3>
@@ -149,7 +151,7 @@ export default function Contact() {
                 </div>      
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-first" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading">access to rare</h3>
@@ -158,7 +160,7 @@ export default function Contact() {
                 </div>
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-first" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading">social media-like </h3>
@@ -167,7 +169,7 @@ export default function Contact() {
                 </div> 
                 <div className="services-2 col-lg-6 d-flex ">
                   <div className="icon d-flex justify-content-center align-items-center">
-                    <span className="flaticon-first" />
+                  <i className="fa fa-solid fa-book" />
                   </div>
                   <div className="media-body pl-3">
                     <h3 className="heading">continue to evolve</h3>
