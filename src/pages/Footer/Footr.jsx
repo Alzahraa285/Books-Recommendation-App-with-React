@@ -4,6 +4,8 @@ import './foot.css';
 export default function Footr () {
   return (
     <div>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
         
 <footer className="footer">
 <div className="container">
