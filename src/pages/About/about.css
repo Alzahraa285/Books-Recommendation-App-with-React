@@ -48,3 +48,12 @@
     .sec{
       margin-top: 40px;
     }
+    .fa{display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+  font-size: xx-large !important;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+    }
