@@ -57,25 +57,25 @@ export default function About() {
                                   <div className="row">
                                     <div className="col-md-6">
                                       <div className="form-group">
-                                        <label className="label" htmlFor="name">Full Name</label>
+                                        <label className="label" htmlFor="name"></label>
                                         <input type="text" className="form-control" name="name" id="name" placeholder="Name" />
                                       </div>
                                     </div>
                                     <div className="col-md-6"> 
                                       <div className="form-group">
-                                        <label className="label" htmlFor="email">Email Address</label>
+                                        <label className="label" htmlFor="email"></label>
                                         <input type="email" className="form-control" name="email" id="email" placeholder="Email" />
                                       </div>
                                     </div>
                                     <div className="col-md-12">
                                       <div className="form-group">
-                                        <label className="label" htmlFor="subject">Subject</label>
+                                        <label className="label" htmlFor="subject"></label>
                                         <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" />
                                       </div>
                                     </div>
                                     <div className="col-md-12">
                                       <div className="form-group">
-                                        <label className="label" htmlFor="#">Message</label>
+                                        <label className="label" htmlFor="#"></label>
                                         <textarea name="message" className="form-control" id="message" cols={30} rows={4} placeholder="Message" defaultValue={""} />
                                       </div>
                                     </div>
