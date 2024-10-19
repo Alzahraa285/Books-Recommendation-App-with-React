@@ -111,7 +111,7 @@ export default function Contact() {
             <div className="img img-2 mb-4" style={{backgroundImage: 'url(https://newbookrecommendation.com/wp-content/uploads/2024/08/Are_You_Sleeping-1031x1536.webp)'}}>
             </div>
             <h2>What is a digital library?</h2>
-            <p>A digital library is a collection of digital objects, such as books, magazines, audio recordings, video recordings and other documents that are accessible electronically,Digital libraries provide users with online access to a wide range of resources ,They are often used by students for research or by professionals seeking to stay current on the latest developments in their field.</p>
+            <p style={{fontSize: 'smaller'}}>A digital library is a collection of digital objects, such as books, magazines, audio recordings, video recordings and other documents that are accessible electronically,Digital libraries provide users with online access to a wide range of resources ,They are often used by students for research or by professionals seeking to stay current on the latest developments in their field.</p>
           </div>
           <div className="col-md-6 wrap-about ftco-animate">
             <div className="heading-section">
