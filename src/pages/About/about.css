@@ -4,7 +4,7 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; }
+   }
   .testimony-wrap {
     display: block;
     position: relative;
@@ -55,5 +55,5 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-    }
+}
+    .mb-2 {padding-top: 30px};
