@@ -20,7 +20,7 @@ const BookDetail = () => {
     fetchBookDetails();
   }, [id]);
 
-  // دالة لتنظيف الوصف من أكواد HTML واستبدال علامات الاقتباس المزدوجة
+  // دالة لتنظيف الوصف من أكواد HTML واستبدال علامات الاقتباس، المزدوجة
   const cleanDescription = (description) => {
     if (!description) return ''; // إذا لم يكن هناك وصف
 
