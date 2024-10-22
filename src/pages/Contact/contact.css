@@ -1,0 +1,98 @@
+
+.hero-wrap {
+  width: 100%;
+  height: 100%;
+  position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative; }
+  .hero-wrap.hero-wrap-2 {
+    height: 400px; }
+    .hero-wrap.hero-wrap-2 .overlay {
+      opacity: .2; }
+
+
+  .hero-wrap .slider-text h1 {
+  
+    line-height: 2.3;
+    text-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 991.98px) {
+      .hero-wrap .slider-text h1 {
+        font-size: 40px;
+        letter-spacing: 3px; } }
+.services {
+  display: block;
+  position: relative;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .services .services-wrap {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 10px 27px -9px rgba(0, 0, 0, 0.11); }
+  .services .img {
+    width: 100%;
+    height: 200px; }
+  .services .icon {
+    line-height: 1.3;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    border-radius: 50%;
+    background: #a3cb4c;
+    -webkit-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15); }
+    .services .icon span {
+      font-size: 50px;
+      color: #fff; }
+  .services .media-body h3 {
+    font-weight: 400;
+    font-size: 26px;
+    color: #000000; }
+
+.services-2 {
+  margin-bottom: 10px; }
+  .services-2 .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15); }
+    .services-2 .icon span {
+      font-size: 28px;
+      color: #fff; }
+  .services-2 .media-body {
+    width: calc(100% - 70px); }
+    .services-2 .media-body h3 {
+      font-family: "Poppins", Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 500; }
+
+.wrap-about .img-2 {
+  height: 600px; }
+
+.ftco-social {
+  padding: 0; }
+  .ftco-social li {
+    list-style: none;
+    margin-right: 10px;
+    display: inline-block; }
+
+.contact-author .desc h3 {
+  font-size: 24px; }
+.text a{
+  color: black ;
+
+}
