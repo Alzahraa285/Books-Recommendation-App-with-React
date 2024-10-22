@@ -1,0 +1,52 @@
+
+.Regisert {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  background-image: url(https://newbookrecommendation.com/wp-content/uploads/2024/08/dall%C2%B7e-2024-01-20-13.27.57-create-a-captivating-hero-image-for-a-book-recommendation-website.-the-image-should-feature-a-diverse-collection-of-books-arranged-in-an-arc-with-the.webp);
+overflow-y: hidden;
+}
+
+
+.Re_form{
+  border: solid;  padding: 20px;
+  border-radius: 50px;
+  width: 400px;
+  margin: 120px auto;
+  height: 500px;
+}
+
+.Regisert label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.Regisert input[type="text"],
+.Regisert input[type="email"],
+ .Regisert input[type="email"],
+ .Regisert input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  width: 100%;
+  margin-bottom: 33px;
+  width: 80%;
+margin-bottom: 20px;
+margin-left: 21px;
+
+}
+.Re_form h1{
+  color: white;
+}
+
+.Regisert button {
+  display: block;
+  padding: 10px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 54px;
+width: 15pc;
+}
