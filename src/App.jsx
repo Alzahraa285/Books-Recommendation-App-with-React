@@ -17,7 +17,7 @@ import Login from "./pages/Login/Login";
 import LogOut from "./pages/LogOut/LogOut";
 
 import BookPage from "./pages/bookPage/BookPage";
-
+import Book from "./pages/BooksSection/BooksSection";
 import TopSearch from "./pages/TopSearch/TopSearch Page/TopSearch";
 //import BookPage from './pages/TopSearch/bookPage/BookPage';
 import Search from "./pages/TopSearch/search/Search";
@@ -64,6 +64,14 @@ export default function App() {
             element={
               // <ProtectedRoute>
               <Authors />
+              // </ProtectedRoute>
+            }
+          />
+            <Route
+            path='recommendations'
+            element={
+              // <ProtectedRoute>
+              <Book />
               // </ProtectedRoute>
             }
           />
