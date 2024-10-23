@@ -14,7 +14,7 @@ export default function AuthorDetails() {
     getAuthorBooks();
   }, [authorName]);
 
-  // Fetch author details (mocked data)
+  // Fetch author details
   async function getAuthorDetails() {
     setLoading(true);
     try {
@@ -29,9 +29,9 @@ export default function AuthorDetails() {
     }
   }
 
-  // Mock fetching books for an author
+  //  fetching books for an author
   async function getAuthorBooks() {
-    // Here you can replace this with a real API call to fetch books for the author
+    // Add a real API call to fetch books for the author
     setBooks([
       { id: 1, title: "Sample Book 1" },
       { id: 2, title: "Sample Book 2" },
