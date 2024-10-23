@@ -57,6 +57,11 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
+                <li className='nav-item'>
+                <Link className='nav-link active' to='recommendations'>
+                Recommendations
+                </Link>
+              </li>
               <li className='nav-item'>
                 <Link className='nav-link active' to='books'>
                   Books
