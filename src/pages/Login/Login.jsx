@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ContactForm.css';
 
 function ContactForm() {
@@ -15,13 +16,15 @@ function ContactForm() {
 
     try {
       const res = await fetch('http://localhost/contact-form-server/login.php', {
-        // هنا يتم استدعاء الـ API
         method: 'POST',
         body: formData
       });
 
       const result = await res.json();
       setResponse(result.message);
+      if (result.redirect) {
+        window.location.href = result.redirect; // توجيه المستخدم إلى الصفحة الجديدة
+    }
     } catch (error) {
       setResponse('Error: ' + error.message);
     }
@@ -30,7 +33,7 @@ function ContactForm() {
   return (
     <div className='login'>
       <div className="wrapper">
-        <form onSubmit={handleSubmit}> {/* تأكد من استخدام onSubmit هنا */}
+        <form onSubmit={handleSubmit}>
           <h1>Login</h1>
           <div className="input-box">
             <input
@@ -58,9 +61,11 @@ function ContactForm() {
           </div>
           <button type="submit" className="btn">Login</button>
           <div className="register-link">
-            <p> Don’t have an account? <a href="Registration.html">Register</a></p>
+            <p>
+              Don’t have an account? <Link to="/register">Register</Link>
+            </p>
           </div>
-          {response && <p>{response}</p>} {/* عرض الاستجابة هنا */}
+          {response && <p>{response}</p>}
         </form>
       </div>
     </div>
