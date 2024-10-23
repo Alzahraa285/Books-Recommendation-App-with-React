@@ -1,113 +1,136 @@
-
 import React, { useEffect, useState } from 'react';
+import Loading from '../../Component/Loading/Loading';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Loading from '../../Component/Loading/Loading';
 
 export default function Book() {
   const [books, setBooks] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [booksPerPage] = useState(8); // Number of books per page
-  const [sortOrder, setSortOrder] = useState('asc'); // Default sort order (asc or desc)
+  const [page, setPage] = useState(0);
+  const [query, setQuery] = useState('');
+  const [sort, setSort] = useState('relevance'); // خيارات: relevance, newest, alphabetical_asc, alphabetical_desc
+  const [language, setLanguage] = useState(''); // خيارات: '', 'ar', 'en'
+  const booksPerPage = 8;
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData(); // جلب البيانات عند تحميل الصفحة
+  }, [sort, query, language]); // إضافة language إلى قائمة الاعتماديات
 
-  async function getData() {
-    axios.get('https://www.dbooks.org/api/recent')
-      .then(({ data: { books } }) => {
-        setBooks(books);
-      })
-      .catch((err) => { console.log(err) });
-  }
+  const getData = async () => {
+    const response = await axios.get(`https://www.googleapis.com/books/v1/volumes`, {
+      params: {
+        q: query || 'bestsellers',
+        orderBy: sort === 'alphabetical_asc' ? 'relevance' : sort === 'alphabetical_desc' ? 'relevance' : sort,
+        maxResults: 40,
+        langRestrict: language,
+      },
+    });
+    let fetchedBooks = response.data.items || [];
 
-  // Sort books by title
-  const sortedBooks = books.sort((a, b) => {
-    if (sortOrder === 'asc') {
-      return a.title.localeCompare(b.title);
-    } else {
-      return b.title.localeCompare(a.title);
+    // ترتيب الكتب بناءً على الخيار المحدد
+    if (sort === 'alphabetical_asc') {
+      fetchedBooks.sort((a, b) => {
+        const titleA = a.volumeInfo.title.toLowerCase();
+        const titleB = b.volumeInfo.title.toLowerCase();
+        return titleA < titleB ? -1 : titleA > titleB ? 1 : 0;
+      });
+    } else if (sort === 'alphabetical_desc') {
+      fetchedBooks.sort((a, b) => {
+        const titleA = a.volumeInfo.title.toLowerCase();
+        const titleB = b.volumeInfo.title.toLowerCase();
+        return titleA > titleB ? -1 : titleA < titleB ? 1 : 0;
+      });
     }
-  });
 
-  // Pagination logic
-  const indexOfLastBook = currentPage * booksPerPage;
-  const indexOfFirstBook = indexOfLastBook - booksPerPage;
-  const currentBooks = sortedBooks.slice(indexOfFirstBook, indexOfLastBook);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Change sorting order
-  const handleSortChange = (e) => {
-    setSortOrder(e.target.value);
+    setBooks(fetchedBooks);
   };
 
-  return (
-    <>
-      <div className='container mb-5 mt-5 pb-5'>
-        <h2 className='text-center mb-5'>Recommended Books</h2>
+  const getPaginatedBooks = () => {
+    const startIndex = page * booksPerPage;
+    return books.slice(startIndex, startIndex + booksPerPage);
+  };
 
-        {/* Sorting Dropdown */}
-        <div className="d-flex justify-content-end mb-3">
-          <label className="mr-2">Sort by:</label>
-          <select value={sortOrder} onChange={handleSortChange} className="form-control w-auto">
-            <option value="asc">Title: A to Z</option>
-            <option value="desc">Title: Z to A</option>
+  const totalPages = Math.ceil(books.length / booksPerPage);
+  
+  const defaultImage = 'https://via.placeholder.com/150'; // رابط الصورة الافتراضية
+
+  return (
+    <div className='container mb-5 mt-5 pb-5'>
+      <h2 className='text-center mb-5'>Our Books</h2>
+      
+      <input 
+        type="text" 
+        placeholder="Search for books..." 
+        value={query} 
+        onChange={(e) => setQuery(e.target.value)} 
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            getData(); // جلب البيانات عند الضغط على Enter
+            setPage(0); // إعادة ضبط الصفحة إلى 0
+          }
+        }}
+        className="form-control mb-3"
+      />
+      
+      <div className="row mb-3">
+        <div className="col-md-4">
+          {/* <label>Language:</label> */}
+          <select value={language} onChange={(e) => setLanguage(e.target.value)} className="form-select">
+            <option value="">All Languages</option>
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
           </select>
         </div>
-
-        <div className="row">
-          {currentBooks.length ? currentBooks.map((book) => (
-            <div key={book.id} className="col-md-3 my-5">
-              <Link className='text-decoration-none' to={`.././details/${book.id}`}>
-                <img className="h-100 w-100" src={book.image} alt="" />
-                <h1
-                  className="text-truncate h6 text-center mt-1 text-success"
-                  data-toggle="tooltip"
-                  data-placement="start"
-                  title={book.title ? book.title : "Unknown"}
-                >
-                  {book.title ? book.title : "Unknown"}
-                </h1>
-              </Link>
-            </div>
-          )) : <Loading />}
+        <div className="col-md-4">
+          {/* <label>Sort by:</label> */}
+          <select value={sort} onChange={(e) => setSort(e.target.value)} className="form-select">
+            <option value="relevance">Relevance</option>
+            <option value="newest">Newest</option>
+          </select>
         </div>
-
-        {/* Pagination */}
-        <div className="d-flex justify-content-center mt-4">
-          <Pagination
-            booksPerPage={booksPerPage}
-            totalBooks={books.length}
-            paginate={paginate}
-            currentPage={currentPage}
-          />
+        <div className="col-md-4">
+          {/* <label>Alphabetical:</label> */}
+          <select value={sort} onChange={(e) => setSort(e.target.value)} className="form-select">
+            <option value="alphabetical_asc">A-Z</option>
+            <option value="alphabetical_desc">Z-A</option>
+          </select>
         </div>
       </div>
-    </>
+
+      
+<div className="row">
+  {books.length ? getPaginatedBooks().map((book) => (
+    <div key={book.id} className="col-md-3 my-5">
+      <Link className='text-decoration-none' to={`/book/${book.id}`}>
+        <img 
+          className="img-fluid" 
+          style={{ height: "345px", width: "214px" }}
+          src={book.volumeInfo.imageLinks?.thumbnail || defaultImage} // استخدم الصورة الافتراضية إذا لم توجد
+          alt={book.volumeInfo.title} 
+        />
+        <h1 className="text-truncate h6 text-center mt-1 text-success" title={book.volumeInfo.title}>
+          {book.volumeInfo.title || "Unknown"}
+        </h1>
+      </Link>
+    </div>
+  )) : <Loading />}
+</div>
+
+
+      <nav aria-label="...">
+        <ul className="pagination pagination-md d-flex justify-content-center">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <li
+              key={i}
+              className={`page-item ${page === i ? 'active' : ''}`} // تمييز الصفحة النشطة
+              onClick={() => setPage(i)}
+            >
+              <a className="page-link" href="#">
+                {i + 1}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
-
-// Pagination Component
-const Pagination = ({ booksPerPage, totalBooks, paginate, currentPage }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalBooks / booksPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  return (
-    <nav>
-      <ul className='pagination'>
-        {pageNumbers.map(number => (
-          <li key={number} className={`page-item ${currentPage === number ? 'active' : ''}`}>
-            <button onClick={() => paginate(number)} className='page-link'>
-              {number}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
