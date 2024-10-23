@@ -35,6 +35,8 @@ export default function Register() {
 
       const result = await res.json();
       setResponse(result.message);
+       if (result.redirect) {
+         window.location.href = result.redirect;}
       setMessage(''); // إعادة تعيين الرسالة عند نجاح التسجيل
     } catch (error) {
       setResponse('Error: ' + error.message);
