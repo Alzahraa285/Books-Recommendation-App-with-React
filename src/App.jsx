@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 
 import Books from "./pages/Books/Books";
 import BookDetails from "./pages/BookDetails/BookDetails";
-import Author from "./pages/Author/Author";
+import Authors from "./pages/Author/Authors";
 
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -63,7 +63,7 @@ export default function App() {
             path='author'
             element={
               // <ProtectedRoute>
-              <Author />
+              <Authors />
               // </ProtectedRoute>
             }
           />
